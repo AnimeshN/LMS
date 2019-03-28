@@ -45,17 +45,45 @@ def logout_user(req):
 	logout(req)
 	return render(req,'lms/home.html',{})
 
-def ncertAdmin(request):
-    if request.method == 'POST':
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            # login(request, user)
-            messages.success(request,('You successfully Registered user'))
-            return redirect('ncertuser')
-    else:
-        form = UserCreationForm()
-    return render(request, 'lms/ncertuser.html', {'form': form})
+# def userManagement(req):
+# 	return render(req,'lms/ncertuser/usermanagement.html',{})	
+
+def ncertAdmin(req):
+	return render(req,'lms/ncertuser.html',{})	
+
+# def ncertAdmin(request):
+#     if request.method == 'POST':
+#         form = UserCreationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             raw_password = form.cleaned_data.get('password1')
+#             user = authenticate(username=username, password=raw_password)
+#             # login(request, user)
+#             messages.success(request,('You successfully Registered user'))
+#             return redirect('ncertuser')
+#     else:
+#         form = UserCreationForm()
+#     return render(request, 'lms/ncertuser.html', {'form': form})
+
+def userManagement(request):
+	if request.method == 'POST':
+	    form = UserCreationForm(request.POST)
+	    if form.is_valid():
+	        form.save()
+	        username = form.cleaned_data.get('username')
+	        raw_password = form.cleaned_data.get('password1')
+	        user = authenticate(username=username, password=raw_password)
+	        # login(request, user)
+	        messages.success(request,('You successfully Registered user'))
+	        return redirect('userManagement')
+	else:
+	    form = UserCreationForm()
+	return render(request, 'lms/ncertuser/usermanagement.html', {'form': form})
+
+
+def activityPlan(req):
+	return render(req,'lms/teacheruser/activityplan.html',{})	
+
+def uploadEvidence(req):
+	return render(req,'lms/teacheruser/uploadevidence.html',{})	

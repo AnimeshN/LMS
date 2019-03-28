@@ -15,11 +15,15 @@
       {% if user.is_authenticated%}
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Create Users <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'ncertuser' %}">Dashboard <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Learning ourcome result <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'usermanage' %}">User Management <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Learning ourcome report <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
@@ -27,7 +31,15 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Resource management <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="">Resource Pool <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Resource nanagement <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Information and Update <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
@@ -43,27 +55,12 @@
       
   </div>
 </nav>
-<div class="container">
-  <h2>
-    Hey Admin!! Create Users
-  </h2>
-  <form method="post">
-    {% csrf_token %}
-    {% for field in form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="color: grey">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-    {% endfor %}
-    <button type="submit">Register User</button>
-  </form>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Dashboard</h1>
+    <p class="lead">This site is under construction. You can only check User Management or Logout</p>
+  </div>
 </div>
- 
 
 {%endblock%}

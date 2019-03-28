@@ -11,6 +11,12 @@ urlpatterns = [
     path('logout/',views.logout_user, name = 'logoutU'),
     path('login/',views.login_user, name = 'login'),
 
+    path('usermanagement/',views.userManagement, name = 'usermanage'),#ncert
+    path('uploadevidence/',views.uploadEvidence, name = 'uploadEvi'),#teacher
+    path('activityplan/',views.activityPlan, name = 'activityP'),#teacher
+
+
+
     
 
 ]

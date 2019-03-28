@@ -19,7 +19,7 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Lowest Learning Outcome <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'lowestlo' %}">Lowest Learning Outcome <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
@@ -27,7 +27,7 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Student Learning Outcome <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'slo' %}">Student Learning Outcome <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
@@ -35,16 +35,22 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Progress Report <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{%url 'pr' %}">Progress Report <span class="sr-only">(current)</span></a>
       </li>
 
        <li class="nav-item active">
-        <a class="nav-link" href="">View Content and Resource <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{%url 'vcar'%}">View Content and Resource <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Feedback <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
       </li>
+
+
       {% else %}
 
        <li class="nav-item active">
@@ -59,7 +65,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Dashboard</h1>
-    <p class="lead">This site is under construction. You can Upload Evidence and Select Activity Plan or Logout.</p>
+    <p class="lead">Email from NCERT</p>
   </div>
 </div>
 

@@ -87,3 +87,17 @@ def activityPlan(req):
 
 def uploadEvidence(req):
 	return render(req,'lms/teacheruser/uploadevidence.html',{})	
+
+def lowestLearningOutcome(req):
+	return render(req,'lms/teacheruser/lowestlearningoutcome.html',{})	
+
+def studentLearningOutcome(req):
+	return render(req,'lms/teacheruser/studentlearningoutcome.html',{})	
+
+
+def progressReport(req):
+	return render(req,'lms/teacheruser/progressreport.html',{})	
+
+
+def viewContentAndResource(req):
+	return render(req,'lms/teacheruser/viewcontentandresource.html',{})	

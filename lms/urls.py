@@ -14,6 +14,11 @@ urlpatterns = [
     path('usermanagement/',views.userManagement, name = 'usermanage'),#ncert
     path('uploadevidence/',views.uploadEvidence, name = 'uploadEvi'),#teacher
     path('activityplan/',views.activityPlan, name = 'activityP'),#teacher
+    path('llo/',views.lowestLearningOutcome, name = 'lowestlo'),#teacher
+    path('student_learning_outcome/',views.studentLearningOutcome, name = 'slo'),#teacher
+    path('progress_report/',views.progressReport, name = 'pr'),#teacher
+    path('view_content_and_resource/',views.viewContentAndResource, name = 'vcar'),#teacher
+
 
 
 

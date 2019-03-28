@@ -59,79 +59,24 @@
 </nav>
 
 
-<script src="{% static 'ncert/myjs/teacherjs.js' %}"></script>  
-<div class="container">
-
- <!--  <div class="jumbotron">
-    <h1 class="display-4">Learning Management System</h1>
-    <p class="lead">NCERT has been conducting the National Achievement Survey (NAS) since 2001. This is the Largest Achievement survey conducted in the country and is amongst the largest conducted in the world. It is being implemented to assess the competency based Learning Outcomes of students at different stages of education.</p>
-    <hr class="my-4">
-    <p>The focus is to initiate culture of networking and learning through each other to bring about a qualitative change in the education system.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </div> -->
-
-
-<form name="myform" id="myForm">
-
-
-Assessment evidences:
-  <select name="assessmentevid">
-    <option value="port">Portfolio Assessment</option>
-    <option value="feed">Feedback Assessment</option>
-    <option value="rub">Rubric Assessment</option>
-    <option value="self">Self-Assessment</option>
-    <option value="self">Peer-Assessment</option>
+Please select to show data:
+  <select name="tqualificaiton">
+    <option value="Class">Class wise</option>
+    <option value="Gender">Gender Wise</option>
+    <option value="CWSN">CWSN wise</option>
+    <option value="Social">Social group wise</option>
   </select>
   <br><br>
 
-  Type of evidence to be submitted:
-  <select name="resourcesubmitted">
-    <option value="vid">Videos</option>
-    <option value="aud">Audio</option>
-    <option value="photo">Photographs</option>
-    <option value="doc">Document</option>
-    
+
+
+Please select timeframe:
+  <select name="tqualificaiton">
+    <option value="Monthly">Monthly</option>
+    <option value="Weekly">Weekly</option>
+    <option value="Daily">Daily</option>
   </select>
   <br><br>
 
-Title of the program:
-  <input type="text" name="titleprogram" >
-  <br><br>
-
-  Language of the program:
-  <input type="text" name="languageprogram" >
-  <br><br>
-
-  Duration of the program:
-  <input type="text" name="durationprogram" >
-  <br><br>
-
-  Licence of the program:
-  <input type="text" name="licenceprogram" >
-  <br><br>
-
-  Description of the program:
-  <input type="text" name="descriptionprogram" >
-  <br><br>
-
-  Keywords of the program:
-  <input type="text" name="keywordprogram" >
-  <br><br>
-
-  Source of the program:
-  <input type="text" name="sourceprogram" >
-  <br><br>
-
-  <input type="file" id="myFile">
-<br><br>
-
-<input type="submit" value="Submit Resource">
- <br><br>
-
- 
-
-  
-</form>
-</div>
 
 {%endblock%}

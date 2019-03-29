@@ -18,19 +18,46 @@
       </li> -->
       
       <li class="nav-item disable">
-        <a class="nav-link" href="">Welcome to LMS<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href=""><h1>Welcome to LMS</h1><span class="sr-only">(current)</span></a>
+      </li>
+       
+
+   </ul>
+
+
+    <ul class="navbar-nav ml-auto">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+     
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Logout <span class="sr-only">(current)</span></a>
+      </li> -->
+      
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Ncert<span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item active">
-        <a class="nav-link" href="{% url 'login' %}">Login<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'login' %}">State<span class="sr-only">(current)</span></a>
       </li>
-   
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">District<span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">School<span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="{% url 'login' %}">Teacher<span class="sr-only">(current)</span></a>
+      </li>
+
+   </ul>
       
   </div>
 </nav>
 
 
 
-<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{% static 'ncert/img/one.jpg' %}" class="d-block w-100" alt="...">
@@ -50,13 +77,13 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div> -->
+</div>
 
-<div class="jumbotron jumbotron-fluid">
+<!-- <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Dashboard</h1>
     <p class="lead">You Received Mail from NCERT</p>
   </div>
-</div>
+</div> -->
 
 {%endblock%}

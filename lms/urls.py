@@ -19,6 +19,8 @@ urlpatterns = [
 
     path('teacher_performance/',views.teacherPerformance, name = 'tp'),#ncert/support
     path('student_performance/',views.studentPerformance, name = 'sp'),#ncert/support
+    path('teacher_support/',views.teacherSupport, name = 'ts'),#ncert/support
+
 
     path('uploadevidence/',views.uploadEvidence, name = 'uploadEvi'),#teacher
     path('activityplan/',views.activityPlan, name = 'activityP'),#teacher

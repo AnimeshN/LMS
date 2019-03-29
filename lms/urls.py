@@ -12,6 +12,14 @@ urlpatterns = [
     path('login/',views.login_user, name = 'login'),
 
     path('usermanagement/',views.userManagement, name = 'usermanage'),#ncert
+    path('learning_outcome/',views.learningOutcomeReport, name = 'lout'),#ncert
+    path('resource_management/',views.resourceManagement, name = 'rmanage'),#ncert
+    path('information_and_update/',views.informationAndUpdate, name = 'infoup'),#ncert
+    path('support_and_supervision/',views.supportAndSupervision, name = 'sas'),#ncert
+
+    path('teacher_performance/',views.teacherPerformance, name = 'tp'),#ncert/support
+    path('student_performance/',views.studentPerformance, name = 'sp'),#ncert/support
+
     path('uploadevidence/',views.uploadEvidence, name = 'uploadEvi'),#teacher
     path('activityplan/',views.activityPlan, name = 'activityP'),#teacher
     path('llo/',views.lowestLearningOutcome, name = 'lowestlo'),#teacher

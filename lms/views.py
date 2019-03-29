@@ -49,7 +49,7 @@ def logout_user(req):
 # 	return render(req,'lms/ncertuser/usermanagement.html',{})	
 
 def ncertAdmin(req):
-	return render(req,'lms/ncertuser.html',{})	
+	return render(req,'lms/ncertuser.html',{'content': 'ncertuser'})	
 
 # def ncertAdmin(request):
 #     if request.method == 'POST':
@@ -66,6 +66,8 @@ def ncertAdmin(req):
 #         form = UserCreationForm()
 #     return render(request, 'lms/ncertuser.html', {'form': form})
 
+
+#	NCERT USER PANEL
 def userManagement(request):
 	if request.method == 'POST':
 	    form = UserCreationForm(request.POST)
@@ -82,6 +84,27 @@ def userManagement(request):
 	return render(request, 'lms/ncertuser/usermanagement.html', {'form': form})
 
 
+def learningOutcomeReport(req):
+	return render(req,'lms/ncertuser/learningoutcomereport.html',{})	
+
+def resourceManagement(req):
+	return render(req,'lms/ncertuser/resourcemanagement.html',{})	
+
+
+
+def informationAndUpdate(req):
+	return render(req,'lms/ncertuser/informationandupdate.html',{})	
+
+def supportAndSupervision(req):
+	return render(req,'lms/ncertuser/supportandsupervision.html',{})	
+
+def teacherPerformance(req):
+	return render(req,'lms/ncertuser/support/teacherperformance.html',{})	
+
+def studentPerformance(req):
+	return render(req,'lms/ncertuser/support/studentperformance.html',{})
+
+# Teacher USER PANEL
 def activityPlan(req):
 	return render(req,'lms/teacheruser/activityplan.html',{})	
 

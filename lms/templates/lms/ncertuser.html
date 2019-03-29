@@ -7,6 +7,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
+  
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <!-- <li class="nav-item active">
@@ -23,23 +25,31 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Learning ourcome report <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'lout' %}">Learning Outcome Report <span class="sr-only">(current)</span></a>
       </li>
 
-      <li class="nav-item active">
+     <!--  <li class="nav-item active">
         <a class="nav-link" href="">Evidences <span class="sr-only">(current)</span></a>
-      </li>
+      </li> -->
 
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" href="">Resource Pool <span class="sr-only">(current)</span></a>
+      </li> -->
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'rmanage'%}">Resource Management <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Resource nanagement <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'sas' %}">Support and Supervison <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" href="">Information and Update <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'infoup'%}">Information and Update <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Feedback <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item active">
@@ -55,12 +65,18 @@
       
   </div>
 </nav>
+{% block ncert%}
+{% endblock %}
 
-<div class="jumbotron jumbotron-fluid">
+{% if content == 'ncertuser' %}
+      <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Dashboard</h1>
-    <p class="lead">This site is under construction. You can only check User Management or Logout</p>
+    <p class="lead">You Mail from NCERT</p>
   </div>
 </div>
+{% endif %}
+
+
 
 {%endblock%}

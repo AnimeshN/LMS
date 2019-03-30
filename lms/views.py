@@ -107,6 +107,9 @@ def studentPerformance(req):
 def teacherSupport(req):
 	return render(req,'lms/ncertuser/support/teachersupport.html',{})	
 
+def studentSupport(req):
+	return render(req,'lms/ncertuser/support/studentsupport.html',{})	
+
 # Teacher USER PANEL
 def activityPlan(req):
 	return render(req,'lms/teacheruser/activityplan.html',{})	

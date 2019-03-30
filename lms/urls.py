@@ -20,6 +20,7 @@ urlpatterns = [
     path('teacher_performance/',views.teacherPerformance, name = 'tp'),#ncert/support
     path('student_performance/',views.studentPerformance, name = 'sp'),#ncert/support
     path('teacher_support/',views.teacherSupport, name = 'ts'),#ncert/support
+    path('student_support/',views.studentSupport, name = 'ss'),#ncert/support
 
 
     path('uploadevidence/',views.uploadEvidence, name = 'uploadEvi'),#teacher

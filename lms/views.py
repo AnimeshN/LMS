@@ -22,7 +22,10 @@ def login_user(req):
 			return redirect('districtuser')
 		elif (user is not None) and (uname == 'school'):
 			login(req,user)
-			return redirect('schooluser')	
+			return redirect('schooluser')
+		elif (user is not None) and (uname == 'state'):
+			login(req,user)
+			return redirect('stateuser')	
 	return render(req,'lms/login.html',{})
 
 
@@ -44,6 +47,9 @@ def teacherUser(req):
 def logout_user(req):
 	logout(req)
 	return render(req,'lms/home.html',{})
+
+def stateUser(req):
+	return render(req,'lms/stateuser.html',{'content': 'stateuser'})	
 
 # def userManagement(req):
 # 	return render(req,'lms/ncertuser/usermanagement.html',{})	
@@ -130,3 +136,46 @@ def progressReport(req):
 
 def viewContentAndResource(req):
 	return render(req,'lms/teacheruser/viewcontentandresource.html',{})	
+
+#state
+
+
+def stateProgressReport(req):
+	return render(req,'lms/stateuser/progressreport.html',{})	
+
+def stateDistrictManagement(req):
+	return render(req,'lms/stateuser/districtmanagement.html',{})	
+
+def stateResourceManagement(req):
+	return render(req,'lms/stateuser/resourcemanagement.html',{})		
+
+
+def stateSupportAndSupervision(req):
+	return render(req,'lms/stateuser/supportandsupervision.html',{})
+
+def stateInformationAndUpdate(req):
+	return render(req,'lms/stateuser/informationandupdate.html',{})
+
+def stateFeedback(req):
+	return render(req,'lms/stateuser/feedback.html',{})
+
+	#statesupprtandsupervision	
+
+def stateTeacherPerformance(req):
+	return render(req,'lms/stateuser/support/teacherperformance.html',{})	
+
+
+def stateTeacherSupport(req):
+	return render(req,'lms/stateuser/support/teachersupport.html',{})	
+
+def stateDistrictSupport(req):
+	return render(req,'lms/stateuser/support/districtsupport.html',{})	
+
+def stateStudentSupport(req):
+	return render(req,'lms/stateuser/support/studentsupport.html',{})	
+
+def stateStudentPerformance(req):
+	return render(req,'lms/stateuser/support/studentperformance.html',{})
+
+def stateInformationAndUpdate(req):
+	return render(req,'lms/stateuser/support/informationandupdate.html',{})	
